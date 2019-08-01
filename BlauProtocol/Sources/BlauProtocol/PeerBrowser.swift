@@ -8,8 +8,6 @@
 import Network
 import os.log
 
-var sharedBrowser: PeerBrowser?
-
 protocol PeerBrowserDelegate: class {
     func refresh(results: Set<NWBrowser.Result>)
 }

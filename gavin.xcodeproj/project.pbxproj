@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -26,6 +26,11 @@
 		E62A721122F27AE7003CEE07 /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62A720F22F27AE7003CEE07 /* MotionManager.swift */; };
 		E62A721222F27AE7003CEE07 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62A721022F27AE7003CEE07 /* WorkoutManager.swift */; };
 		E62A721622F27CB7003CEE07 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E62A721522F27CB7003CEE07 /* HealthKit.framework */; };
+		E62A721D22F30471003CEE07 /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62A721C22F30471003CEE07 /* UITableViewCell+Extensions.swift */; };
+		E62A722222F30515003CEE07 /* PairView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62A722122F30515003CEE07 /* PairView.swift */; };
+		E62A722522F3062D003CEE07 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62A722422F3062D003CEE07 /* World.swift */; };
+		E62A722722F30ADF003CEE07 /* BlauProtocol in Frameworks */ = {isa = PBXBuildFile; productRef = E62A722622F30ADF003CEE07 /* BlauProtocol */; };
+		E62A722922F30AF0003CEE07 /* BlauProtocol in Frameworks */ = {isa = PBXBuildFile; productRef = E62A722822F30AF0003CEE07 /* BlauProtocol */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +102,9 @@
 		E62A721022F27AE7003CEE07 /* WorkoutManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
 		E62A721322F27CB6003CEE07 /* gavin-watchOS WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "gavin-watchOS WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		E62A721522F27CB7003CEE07 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS6.0.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		E62A721C22F30471003CEE07 /* UITableViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extensions.swift"; sourceTree = "<group>"; };
+		E62A722122F30515003CEE07 /* PairView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairView.swift; sourceTree = "<group>"; };
+		E62A722422F3062D003CEE07 /* World.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E62A722722F30ADF003CEE07 /* BlauProtocol in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E62A722922F30AF0003CEE07 /* BlauProtocol in Frameworks */,
 				E62A721622F27CB7003CEE07 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,6 +154,8 @@
 		E62A71C122F26AB2003CEE07 /* gavin-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				E62A722322F30620003CEE07 /* World */,
+				E62A721B22F30462003CEE07 /* Extensions */,
 				E62A720922F26E62003CEE07 /* Root */,
 				E62A71C222F26AB2003CEE07 /* AppDelegate.swift */,
 				E62A71C422F26AB2003CEE07 /* SceneDelegate.swift */,
@@ -209,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				E62A71C622F26AB2003CEE07 /* ContentView.swift */,
+				E62A722122F30515003CEE07 /* PairView.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -238,6 +251,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E62A721B22F30462003CEE07 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E62A721C22F30471003CEE07 /* UITableViewCell+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E62A722322F30620003CEE07 /* World */ = {
+			isa = PBXGroup;
+			children = (
+				E62A722422F3062D003CEE07 /* World.swift */,
+			);
+			path = World;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -254,6 +283,9 @@
 			dependencies = (
 			);
 			name = "gavin-iOS";
+			packageProductDependencies = (
+				E62A722622F30ADF003CEE07 /* BlauProtocol */,
+			);
 			productName = "gavin-iOS";
 			productReference = E62A71BF22F26AB2003CEE07 /* gavin-iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -305,6 +337,9 @@
 			dependencies = (
 			);
 			name = "gavin-watchOS WatchKit Extension";
+			packageProductDependencies = (
+				E62A722822F30AF0003CEE07 /* BlauProtocol */,
+			);
 			productName = "gavin-watchOS WatchKit Extension";
 			productReference = E62A71E822F26ACA003CEE07 /* gavin-watchOS WatchKit Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
@@ -396,8 +431,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E62A722522F3062D003CEE07 /* World.swift in Sources */,
+				E62A722222F30515003CEE07 /* PairView.swift in Sources */,
 				E62A71C322F26AB2003CEE07 /* AppDelegate.swift in Sources */,
 				E62A71C522F26AB2003CEE07 /* SceneDelegate.swift in Sources */,
+				E62A721D22F30471003CEE07 /* UITableViewCell+Extensions.swift in Sources */,
 				E62A71C722F26AB2003CEE07 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1063,6 +1101,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E62A722622F30ADF003CEE07 /* BlauProtocol */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = BlauProtocol;
+		};
+		E62A722822F30AF0003CEE07 /* BlauProtocol */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = BlauProtocol;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E62A71B522F26A9C003CEE07 /* Project object */;
 }

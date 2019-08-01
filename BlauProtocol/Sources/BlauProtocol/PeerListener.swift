@@ -8,16 +8,14 @@
 import Network
 import os.log
 
-var sharedListener: PeerListener?
-
-class PeerListener {
+public class PeerListener {
     
     weak var delegate: PeerConnectionDelegate?
     var listener: NWListener?
     var name: String
     var passcode: String
     
-    init(name: String,
+    public init(name: String,
          passcode: String,
          delegate: PeerConnectionDelegate) {
         self.delegate = delegate
@@ -63,7 +61,7 @@ class PeerListener {
         }
     }
     
-    func reset(name: String) {
+    public func reset(name: String) {
         self.name = name
         if let listener = listener {
             listener.service = NWListener.Service(name: self.name, type: "_blau._tcp")

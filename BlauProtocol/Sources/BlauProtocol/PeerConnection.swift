@@ -12,7 +12,7 @@ import os.log
 
 var sharedConnection: PeerConnection?
 
-protocol PeerConnectionDelegate: class {
+public protocol PeerConnectionDelegate: class {
     func connectionReady()
     func connectionFailed()
     func receiveMessage(context: Data?, message: NWProtocolFramer.Message)

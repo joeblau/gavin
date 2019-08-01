@@ -8,11 +8,11 @@
 import SwiftUI
 
 enum Tab {
-    case run, tag
+    case run, tag, pair
 }
 
 struct ContentView: View {
-    @State private var selection: Tab = .run
+    @State private var selection: Tab = .pair
     
     var body: some View {
         TabView(selection: $selection){
@@ -34,6 +34,15 @@ struct ContentView: View {
                     }
             }
             .tag(Tab.tag)
+            PairView()
+                .tabItem {
+                    VStack {
+                        Image(systemName: selection == .pair ? "plus.circle.fill" : "plus.circle")
+                        Text("Pair")
+                    }
+            }
+            .tag(Tab.pair)
+                
         }
     }
 }
