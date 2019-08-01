@@ -6,20 +6,303 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		E62A71C322F26AB2003CEE07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62A71C222F26AB2003CEE07 /* AppDelegate.swift */; };
+		E62A71C522F26AB2003CEE07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62A71C422F26AB2003CEE07 /* SceneDelegate.swift */; };
+		E62A71C722F26AB2003CEE07 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62A71C622F26AB2003CEE07 /* ContentView.swift */; };
+		E62A71C922F26AB3003CEE07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E62A71C822F26AB3003CEE07 /* Assets.xcassets */; };
+		E62A71CC22F26AB3003CEE07 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E62A71CB22F26AB3003CEE07 /* Preview Assets.xcassets */; };
+		E62A71CF22F26AB3003CEE07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E62A71CD22F26AB3003CEE07 /* LaunchScreen.storyboard */; };
+		E62A71DA22F26AC9003CEE07 /* gavin-watchOS WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = E62A71D922F26AC9003CEE07 /* gavin-watchOS WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E62A71E022F26AC9003CEE07 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E62A71DE22F26AC9003CEE07 /* Interface.storyboard */; };
+		E62A71E222F26ACA003CEE07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E62A71E122F26ACA003CEE07 /* Assets.xcassets */; };
+		E62A71E922F26ACA003CEE07 /* gavin-watchOS WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E62A71E822F26ACA003CEE07 /* gavin-watchOS WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E62A71EE22F26ACA003CEE07 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62A71ED22F26ACA003CEE07 /* ContentView.swift */; };
+		E62A71F022F26ACA003CEE07 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62A71EF22F26ACA003CEE07 /* HostingController.swift */; };
+		E62A71F222F26ACA003CEE07 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62A71F122F26ACA003CEE07 /* ExtensionDelegate.swift */; };
+		E62A71F422F26ACA003CEE07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E62A71F322F26ACA003CEE07 /* Assets.xcassets */; };
+		E62A71F722F26ACA003CEE07 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E62A71F622F26ACA003CEE07 /* Preview Assets.xcassets */; };
+		E62A720C22F26F49003CEE07 /* WKInterfaceDeviceWristLocation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62A720B22F26F49003CEE07 /* WKInterfaceDeviceWristLocation+Extensions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E62A71DB22F26AC9003CEE07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E62A71B522F26A9C003CEE07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E62A71D822F26AC9003CEE07;
+			remoteInfo = "gavin-watchOS WatchKit App";
+		};
+		E62A71EA22F26ACA003CEE07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E62A71B522F26A9C003CEE07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E62A71E722F26ACA003CEE07;
+			remoteInfo = "gavin-watchOS WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E62A71FC22F26ACA003CEE07 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E62A71E922F26ACA003CEE07 /* gavin-watchOS WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E62A720022F26ACA003CEE07 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				E62A71DA22F26AC9003CEE07 /* gavin-watchOS WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		E62A71BF22F26AB2003CEE07 /* gavin-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gavin-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E62A71C222F26AB2003CEE07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E62A71C422F26AB2003CEE07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E62A71C622F26AB2003CEE07 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E62A71C822F26AB3003CEE07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E62A71CB22F26AB3003CEE07 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E62A71CE22F26AB3003CEE07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E62A71D022F26AB3003CEE07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E62A71D622F26AC9003CEE07 /* gavin-watchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gavin-watchOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E62A71D922F26AC9003CEE07 /* gavin-watchOS WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gavin-watchOS WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E62A71DF22F26AC9003CEE07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		E62A71E122F26ACA003CEE07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E62A71E322F26ACA003CEE07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E62A71E822F26ACA003CEE07 /* gavin-watchOS WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "gavin-watchOS WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E62A71ED22F26ACA003CEE07 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E62A71EF22F26ACA003CEE07 /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		E62A71F122F26ACA003CEE07 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		E62A71F322F26ACA003CEE07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E62A71F622F26ACA003CEE07 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E62A71F822F26ACA003CEE07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E62A720722F26C4A003CEE07 /* BlauProtocol */ = {isa = PBXFileReference; lastKnownFileType = folder; path = BlauProtocol; sourceTree = "<group>"; };
+		E62A720B22F26F49003CEE07 /* WKInterfaceDeviceWristLocation+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WKInterfaceDeviceWristLocation+Extensions.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E62A71BC22F26AB2003CEE07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E62A71E522F26ACA003CEE07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
 /* Begin PBXGroup section */
 		E62A71B422F26A9C003CEE07 = {
 			isa = PBXGroup;
 			children = (
+				E62A720722F26C4A003CEE07 /* BlauProtocol */,
+				E62A71C122F26AB2003CEE07 /* gavin-iOS */,
+				E62A71DD22F26AC9003CEE07 /* gavin-watchOS WatchKit App */,
+				E62A71EC22F26ACA003CEE07 /* gavin-watchOS WatchKit Extension */,
+				E62A71C022F26AB2003CEE07 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
+		E62A71C022F26AB2003CEE07 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E62A71BF22F26AB2003CEE07 /* gavin-iOS.app */,
+				E62A71D622F26AC9003CEE07 /* gavin-watchOS.app */,
+				E62A71D922F26AC9003CEE07 /* gavin-watchOS WatchKit App.app */,
+				E62A71E822F26ACA003CEE07 /* gavin-watchOS WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E62A71C122F26AB2003CEE07 /* gavin-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				E62A720922F26E62003CEE07 /* Root */,
+				E62A71C222F26AB2003CEE07 /* AppDelegate.swift */,
+				E62A71C422F26AB2003CEE07 /* SceneDelegate.swift */,
+				E62A71C822F26AB3003CEE07 /* Assets.xcassets */,
+				E62A71CD22F26AB3003CEE07 /* LaunchScreen.storyboard */,
+				E62A71D022F26AB3003CEE07 /* Info.plist */,
+				E62A71CA22F26AB3003CEE07 /* Preview Content */,
+			);
+			path = "gavin-iOS";
+			sourceTree = "<group>";
+		};
+		E62A71CA22F26AB3003CEE07 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E62A71CB22F26AB3003CEE07 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E62A71DD22F26AC9003CEE07 /* gavin-watchOS WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				E62A71DE22F26AC9003CEE07 /* Interface.storyboard */,
+				E62A71E122F26ACA003CEE07 /* Assets.xcassets */,
+				E62A71E322F26ACA003CEE07 /* Info.plist */,
+			);
+			path = "gavin-watchOS WatchKit App";
+			sourceTree = "<group>";
+		};
+		E62A71EC22F26ACA003CEE07 /* gavin-watchOS WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E62A720A22F26F1E003CEE07 /* Extensions */,
+				E62A720822F26E59003CEE07 /* Root */,
+				E62A71EF22F26ACA003CEE07 /* HostingController.swift */,
+				E62A71F122F26ACA003CEE07 /* ExtensionDelegate.swift */,
+				E62A71F322F26ACA003CEE07 /* Assets.xcassets */,
+				E62A71F822F26ACA003CEE07 /* Info.plist */,
+				E62A71F522F26ACA003CEE07 /* Preview Content */,
+			);
+			path = "gavin-watchOS WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		E62A71F522F26ACA003CEE07 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E62A71F622F26ACA003CEE07 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E62A720822F26E59003CEE07 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				E62A71ED22F26ACA003CEE07 /* ContentView.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		E62A720922F26E62003CEE07 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				E62A71C622F26AB2003CEE07 /* ContentView.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		E62A720A22F26F1E003CEE07 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E62A720B22F26F49003CEE07 /* WKInterfaceDeviceWristLocation+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E62A71BE22F26AB2003CEE07 /* gavin-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E62A71D122F26AB3003CEE07 /* Build configuration list for PBXNativeTarget "gavin-iOS" */;
+			buildPhases = (
+				E62A71BB22F26AB2003CEE07 /* Sources */,
+				E62A71BC22F26AB2003CEE07 /* Frameworks */,
+				E62A71BD22F26AB2003CEE07 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "gavin-iOS";
+			productName = "gavin-iOS";
+			productReference = E62A71BF22F26AB2003CEE07 /* gavin-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E62A71D522F26AC9003CEE07 /* gavin-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E62A720122F26ACA003CEE07 /* Build configuration list for PBXNativeTarget "gavin-watchOS" */;
+			buildPhases = (
+				E62A71D422F26AC9003CEE07 /* Resources */,
+				E62A720022F26ACA003CEE07 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E62A71DC22F26AC9003CEE07 /* PBXTargetDependency */,
+			);
+			name = "gavin-watchOS";
+			productName = "gavin-watchOS";
+			productReference = E62A71D622F26AC9003CEE07 /* gavin-watchOS.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		E62A71D822F26AC9003CEE07 /* gavin-watchOS WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E62A71FD22F26ACA003CEE07 /* Build configuration list for PBXNativeTarget "gavin-watchOS WatchKit App" */;
+			buildPhases = (
+				E62A71D722F26AC9003CEE07 /* Resources */,
+				E62A71FC22F26ACA003CEE07 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E62A71EB22F26ACA003CEE07 /* PBXTargetDependency */,
+			);
+			name = "gavin-watchOS WatchKit App";
+			productName = "gavin-watchOS WatchKit App";
+			productReference = E62A71D922F26AC9003CEE07 /* gavin-watchOS WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		E62A71E722F26ACA003CEE07 /* gavin-watchOS WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E62A71F922F26ACA003CEE07 /* Build configuration list for PBXNativeTarget "gavin-watchOS WatchKit Extension" */;
+			buildPhases = (
+				E62A71E422F26ACA003CEE07 /* Sources */,
+				E62A71E522F26ACA003CEE07 /* Frameworks */,
+				E62A71E622F26ACA003CEE07 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "gavin-watchOS WatchKit Extension";
+			productName = "gavin-watchOS WatchKit Extension";
+			productReference = E62A71E822F26ACA003CEE07 /* gavin-watchOS WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		E62A71B522F26A9C003CEE07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
+				TargetAttributes = {
+					E62A71BE22F26AB2003CEE07 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					E62A71D522F26AC9003CEE07 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					E62A71D822F26AC9003CEE07 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					E62A71E722F26ACA003CEE07 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+				};
 			};
 			buildConfigurationList = E62A71B822F26A9C003CEE07 /* Build configuration list for PBXProject "gavin" */;
 			compatibilityVersion = "Xcode 9.3";
@@ -30,12 +313,111 @@
 				Base,
 			);
 			mainGroup = E62A71B422F26A9C003CEE07;
+			productRefGroup = E62A71C022F26AB2003CEE07 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				E62A71BE22F26AB2003CEE07 /* gavin-iOS */,
+				E62A71D522F26AC9003CEE07 /* gavin-watchOS */,
+				E62A71D822F26AC9003CEE07 /* gavin-watchOS WatchKit App */,
+				E62A71E722F26ACA003CEE07 /* gavin-watchOS WatchKit Extension */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E62A71BD22F26AB2003CEE07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E62A71CF22F26AB3003CEE07 /* LaunchScreen.storyboard in Resources */,
+				E62A71CC22F26AB3003CEE07 /* Preview Assets.xcassets in Resources */,
+				E62A71C922F26AB3003CEE07 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E62A71D422F26AC9003CEE07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E62A71D722F26AC9003CEE07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E62A71E222F26ACA003CEE07 /* Assets.xcassets in Resources */,
+				E62A71E022F26AC9003CEE07 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E62A71E622F26ACA003CEE07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E62A71F722F26ACA003CEE07 /* Preview Assets.xcassets in Resources */,
+				E62A71F422F26ACA003CEE07 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E62A71BB22F26AB2003CEE07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E62A71C322F26AB2003CEE07 /* AppDelegate.swift in Sources */,
+				E62A71C522F26AB2003CEE07 /* SceneDelegate.swift in Sources */,
+				E62A71C722F26AB2003CEE07 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E62A71E422F26ACA003CEE07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E62A71F022F26ACA003CEE07 /* HostingController.swift in Sources */,
+				E62A71EE22F26ACA003CEE07 /* ContentView.swift in Sources */,
+				E62A720C22F26F49003CEE07 /* WKInterfaceDeviceWristLocation+Extensions.swift in Sources */,
+				E62A71F222F26ACA003CEE07 /* ExtensionDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E62A71DC22F26AC9003CEE07 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E62A71D822F26AC9003CEE07 /* gavin-watchOS WatchKit App */;
+			targetProxy = E62A71DB22F26AC9003CEE07 /* PBXContainerItemProxy */;
+		};
+		E62A71EB22F26ACA003CEE07 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E62A71E722F26ACA003CEE07 /* gavin-watchOS WatchKit Extension */;
+			targetProxy = E62A71EA22F26ACA003CEE07 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E62A71CD22F26AB3003CEE07 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E62A71CE22F26AB3003CEE07 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E62A71DE22F26AC9003CEE07 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E62A71DF22F26AC9003CEE07 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E62A71B922F26A9C003CEE07 /* Debug */ = {
@@ -50,6 +432,556 @@
 			};
 			name = Release;
 		};
+		E62A71D222F26AB3003CEE07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_ASSET_PATHS = "gavin-iOS/Preview\\ Content";
+				DEVELOPMENT_TEAM = K78G42H4U2;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "gavin-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.joeblau.gavin-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E62A71D322F26AB3003CEE07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_ASSET_PATHS = "gavin-iOS/Preview\\ Content";
+				DEVELOPMENT_TEAM = K78G42H4U2;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "gavin-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.joeblau.gavin-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E62A71FA22F26ACA003CEE07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_ASSET_PATHS = "\"gavin-watchOS WatchKit Extension\"/Preview\\ Content";
+				DEVELOPMENT_TEAM = K78G42H4U2;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "gavin-watchOS WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.joeblau.gavin-watchOS.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Debug;
+		};
+		E62A71FB22F26ACA003CEE07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_ASSET_PATHS = "\"gavin-watchOS WatchKit Extension\"/Preview\\ Content";
+				DEVELOPMENT_TEAM = K78G42H4U2;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "gavin-watchOS WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.joeblau.gavin-watchOS.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Release;
+		};
+		E62A71FE22F26ACA003CEE07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = K78G42H4U2;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IBSC_MODULE = gavin_watchOS_WatchKit_Extension;
+				INFOPLIST_FILE = "gavin-watchOS WatchKit App/Info.plist";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.joeblau.gavin-watchOS.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Debug;
+		};
+		E62A71FF22F26ACA003CEE07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = K78G42H4U2;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IBSC_MODULE = gavin_watchOS_WatchKit_Extension;
+				INFOPLIST_FILE = "gavin-watchOS WatchKit App/Info.plist";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.joeblau.gavin-watchOS.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Release;
+		};
+		E62A720222F26ACA003CEE07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = K78G42H4U2;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.joeblau.gavin-watchOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		E62A720322F26ACA003CEE07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = K78G42H4U2;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.joeblau.gavin-watchOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -58,6 +990,42 @@
 			buildConfigurations = (
 				E62A71B922F26A9C003CEE07 /* Debug */,
 				E62A71BA22F26A9C003CEE07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E62A71D122F26AB3003CEE07 /* Build configuration list for PBXNativeTarget "gavin-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E62A71D222F26AB3003CEE07 /* Debug */,
+				E62A71D322F26AB3003CEE07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E62A71F922F26ACA003CEE07 /* Build configuration list for PBXNativeTarget "gavin-watchOS WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E62A71FA22F26ACA003CEE07 /* Debug */,
+				E62A71FB22F26ACA003CEE07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E62A71FD22F26ACA003CEE07 /* Build configuration list for PBXNativeTarget "gavin-watchOS WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E62A71FE22F26ACA003CEE07 /* Debug */,
+				E62A71FF22F26ACA003CEE07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E62A720122F26ACA003CEE07 /* Build configuration list for PBXNativeTarget "gavin-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E62A720222F26ACA003CEE07 /* Debug */,
+				E62A720322F26ACA003CEE07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
