@@ -50,7 +50,7 @@ class PeerConnection {
         }
     }
     
-    private func startConnection() {
+    func startConnection() {
         guard let connection = connection else {
             return
         }
@@ -58,33 +58,30 @@ class PeerConnection {
         connection.stateUpdateHandler = { newState in
             switch newState {
             case .ready:
-                os_log("%@ established", connection.debugDescription)
+                os_log("🛠 %@ established", connection.debugDescription)
                 self.receiveNextMessage()
-                
-                if let delegate = self.delegate {
-                    delegate.connectionReady()
-                }
+                self.delegate?.connectionReady()
             case .failed(let error):
-                os_log("%@ failed with error %@",
+                os_log("🛠 %@ failed with error %@",
                        connection.debugDescription,
                        error.debugDescription)
                 connection.cancel()
-                if let delegate = self.delegate {
-                    delegate.connectionFailed()
-                }
+                self.delegate?.connectionFailed()
             default:
                 break
             }
         }
+        
+        connection.start(queue: .main)
     }
     
-    func sendGyroData(_ gyroData: CMGyroData) {
+    func sendGyroData(gyroData: CMGyroData) {
         guard let connection = connection else {
             return
         }
         
-        let message = NWProtocolFramer.Message(blauMessageType: .gyro)
-        let context = NWConnection.ContentContext(identifier: "gyro",
+        let message = NWProtocolFramer.Message(blauMessageType: .gyroSensor)
+        let context = NWConnection.ContentContext(identifier: "gyro_sensor",
                                                   metadata: [message])
         
         let archivedGyroData = try? NSKeyedArchiver.archivedData(withRootObject: gyroData, requiringSecureCoding: true)

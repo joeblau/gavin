@@ -12,15 +12,14 @@ extension NWParameters {
     convenience init(passcode: String) {
         let tcpOptions = NWProtocolTCP.Options()
         tcpOptions.enableKeepalive = true
-        tcpOptions.enableFastOpen = true
         tcpOptions.keepaliveIdle = 2
         
         self.init(tls: NWParameters.tlsOptoins(passcode: passcode), tcp: tcpOptions)
         
         includePeerToPeer = true
         
-        let dualWieldOptions = NWProtocolFramer.Options(definition: BlauProtocol.definition)
-        self.defaultProtocolStack.applicationProtocols.insert(dualWieldOptions, at: 0)
+        let gavinOptions = NWProtocolFramer.Options(definition: BlauProtocol.definition)
+        self.defaultProtocolStack.applicationProtocols.insert(gavinOptions, at: 0)
     }
     
     private static func tlsOptoins(passcode: String) -> NWProtocolTLS.Options {
@@ -40,19 +39,7 @@ extension NWParameters {
                                                 authenticationDispatchData as __DispatchData,
                                                 BlauProtocol.label.dispatchData as __DispatchData)
         sec_protocol_options_append_tls_ciphersuite(tlsOptions.securityProtocolOptions,
-                                                    tls_ciphersuite_t(rawValue: TLS_PSK_WITH_AES_128_GCM_SHA256)!)
+                                                    tls_ciphersuite_t(rawValue: UInt16(TLS_PSK_WITH_AES_128_GCM_SHA256))!)
         return tlsOptions
-    }
-}
-
-extension String {
-    var dispatchData: DispatchData {
-        guard let stringData = self.data(using: .unicode) else {
-            fatalError("can not unicode encode string into data")
-        }
-        return withUnsafeBytes(of: stringData) { ptr in
-            DispatchData(bytes: UnsafeRawBufferPointer(start: ptr.baseAddress,
-                                                       count: stringData.count))
-        }
     }
 }

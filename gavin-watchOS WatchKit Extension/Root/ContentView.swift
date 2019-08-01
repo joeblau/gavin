@@ -6,17 +6,26 @@
 //
 
 import SwiftUI
+import HealthKit
 
 struct ContentView: View {
     var wrist: String
+    let workoutManager = WorkoutManager()
     
     var body: some View {
         VStack {
             Text("Wrist \(wrist)")
-            Button(action: {}) {Text("Start")}
+            Button(action: {
+                switch self.workoutManager.session {
+                case .some: self.workoutManager.stopWorkout()
+                case .none: self.workoutManager.startWorkout()
+                }
+            }) {
+                Text(self.workoutManager.session?.state == .running ? "Stop" : "Start")
             }
-            .padding()
-            .navigationBarTitle(Text("⌚️ \(wrist)"))
+        }
+        .padding()
+        .navigationBarTitle(Text("⌚️ \(wrist)"))
     }
 }
 

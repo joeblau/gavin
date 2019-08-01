@@ -8,6 +8,8 @@
 import Network
 import os.log
 
+var sharedBrowser: PeerBrowser?
+
 protocol PeerBrowserDelegate: class {
     func refresh(results: Set<NWBrowser.Result>)
 }
@@ -25,26 +27,25 @@ class PeerBrowser {
         let parameters = NWParameters()
         parameters.includePeerToPeer = true
         
-        browser = NWBrowser(for: .bonjour(type: "_blau._tcp", domain: nil),
-                            using: parameters)
-        browser?.stateUpdateHandler = { newState in
+        let browser = NWBrowser(for: .bonjour(type: "_blau._tcp", domain: nil),
+                                using: parameters)
+        self.browser = browser
+        browser.stateUpdateHandler = { newState in
             switch newState {
             case .failed(let error):
-                os_log("%@",
-                       log: .default,
-                       type: .error,
+                os_log("🛠 %@",
                        error.localizedDescription)
-                self.browser?.cancel()
+                browser.cancel()
                 self.startBrowsing()
             default:
                 break
             }
         }
         
-        browser?.browseResultsChangedHandler = { results, changes in
+        browser.browseResultsChangedHandler = { results, changes in
             self.delegate?.refresh(results: results)
         }
         
-        browser?.start(queue: .main)
+        browser.start(queue: .main)
     }
 }

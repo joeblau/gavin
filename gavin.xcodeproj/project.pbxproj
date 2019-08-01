@@ -23,6 +23,9 @@
 		E62A71F422F26ACA003CEE07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E62A71F322F26ACA003CEE07 /* Assets.xcassets */; };
 		E62A71F722F26ACA003CEE07 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E62A71F622F26ACA003CEE07 /* Preview Assets.xcassets */; };
 		E62A720C22F26F49003CEE07 /* WKInterfaceDeviceWristLocation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62A720B22F26F49003CEE07 /* WKInterfaceDeviceWristLocation+Extensions.swift */; };
+		E62A721122F27AE7003CEE07 /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62A720F22F27AE7003CEE07 /* MotionManager.swift */; };
+		E62A721222F27AE7003CEE07 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62A721022F27AE7003CEE07 /* WorkoutManager.swift */; };
+		E62A721622F27CB7003CEE07 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E62A721522F27CB7003CEE07 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +93,10 @@
 		E62A71F822F26ACA003CEE07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E62A720722F26C4A003CEE07 /* BlauProtocol */ = {isa = PBXFileReference; lastKnownFileType = folder; path = BlauProtocol; sourceTree = "<group>"; };
 		E62A720B22F26F49003CEE07 /* WKInterfaceDeviceWristLocation+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WKInterfaceDeviceWristLocation+Extensions.swift"; sourceTree = "<group>"; };
+		E62A720F22F27AE7003CEE07 /* MotionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
+		E62A721022F27AE7003CEE07 /* WorkoutManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
+		E62A721322F27CB6003CEE07 /* gavin-watchOS WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "gavin-watchOS WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		E62A721522F27CB7003CEE07 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS6.0.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E62A721622F27CB7003CEE07 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +126,7 @@
 				E62A71DD22F26AC9003CEE07 /* gavin-watchOS WatchKit App */,
 				E62A71EC22F26ACA003CEE07 /* gavin-watchOS WatchKit Extension */,
 				E62A71C022F26AB2003CEE07 /* Products */,
+				E62A721422F27CB7003CEE07 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -167,6 +176,8 @@
 		E62A71EC22F26ACA003CEE07 /* gavin-watchOS WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				E62A721322F27CB6003CEE07 /* gavin-watchOS WatchKit Extension.entitlements */,
+				E62A720E22F27AD8003CEE07 /* Controllers */,
 				E62A720A22F26F1E003CEE07 /* Extensions */,
 				E62A720822F26E59003CEE07 /* Root */,
 				E62A71EF22F26ACA003CEE07 /* HostingController.swift */,
@@ -208,6 +219,23 @@
 				E62A720B22F26F49003CEE07 /* WKInterfaceDeviceWristLocation+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E62A720E22F27AD8003CEE07 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E62A720F22F27AE7003CEE07 /* MotionManager.swift */,
+				E62A721022F27AE7003CEE07 /* WorkoutManager.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E62A721422F27CB7003CEE07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E62A721522F27CB7003CEE07 /* HealthKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -379,9 +407,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E62A71F022F26ACA003CEE07 /* HostingController.swift in Sources */,
+				E62A721122F27AE7003CEE07 /* MotionManager.swift in Sources */,
 				E62A71EE22F26ACA003CEE07 /* ContentView.swift in Sources */,
 				E62A720C22F26F49003CEE07 /* WKInterfaceDeviceWristLocation+Extensions.swift in Sources */,
 				E62A71F222F26ACA003CEE07 /* ExtensionDelegate.swift in Sources */,
+				E62A721222F27AE7003CEE07 /* WorkoutManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,6 +637,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "gavin-watchOS WatchKit Extension/gavin-watchOS WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -683,6 +714,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "gavin-watchOS WatchKit Extension/gavin-watchOS WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";

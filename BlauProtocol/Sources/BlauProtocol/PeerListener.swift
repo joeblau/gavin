@@ -8,6 +8,8 @@
 import Network
 import os.log
 
+var sharedListener: PeerListener?
+
 class PeerListener {
     
     weak var delegate: PeerConnectionDelegate?
@@ -21,6 +23,7 @@ class PeerListener {
         self.delegate = delegate
         self.name = name
         self.passcode = passcode
+        startListtening()
     }
     
     func startListtening() {
@@ -31,16 +34,16 @@ class PeerListener {
             listener.stateUpdateHandler = { newState in
                 switch newState {
                 case .ready:
-                    os_log("listener ready on port %@", listener.port.debugDescription)
+                    os_log("🛠 listener ready on port %@", listener.port.debugDescription)
                 case .failed(let error):
-                    os_log("listener failed with %@, restarting", error.localizedDescription)
+                    os_log("🛠 listener failed with %@, restarting", error.localizedDescription)
                     listener.cancel()
                     self.startListtening()
                 default:
                     break
                 }
             }
-            
+
             listener.newConnectionHandler = { newConnection in
                 if let delegate = self.delegate {
                     if sharedConnection == nil {
@@ -51,12 +54,10 @@ class PeerListener {
                     }
                 }
             }
-            
+
             listener.start(queue: .main)
         } catch {
-            os_log("failed to craete listener: %@",
-                   log: .default,
-                   type: .error,
+            os_log("🛠 failed to craete listener: %@",
                    error.localizedDescription)
             abort()
         }
