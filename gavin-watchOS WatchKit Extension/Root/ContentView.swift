@@ -9,12 +9,19 @@ import SwiftUI
 import HealthKit
 
 struct ContentView: View {
+    @EnvironmentObject var watchState: WatchState
+    
     var wrist: String
     let workoutManager = WorkoutManager()
     
     var body: some View {
         VStack {
-            Text("Wrist \(wrist)")
+            HStack {
+                Text("Connected:")
+                Image(systemName: watchState.connected ? "bolt.fill" : "bolt.slash.fill")
+                    .foregroundColor(watchState.connected ? .green : .red)
+            }
+           
             Button(action: {
                 switch self.workoutManager.session {
                 case .some: self.workoutManager.stopWorkout()
@@ -25,14 +32,7 @@ struct ContentView: View {
             }
         }
         .padding()
-        .navigationBarTitle(Text("⌚️ \(wrist)"))
-        .onAppear {
-            print("here")
-        }
-        .onDisappear {
-            print("gone")
-        }
-
+        .navigationBarTitle(Text("⌚️ \(wrist.capitalized)"))
     }
 }
 
@@ -40,6 +40,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView(wrist: "Right")
+            .environmentObject(WatchState())
     }
 }
 #endif

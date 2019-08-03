@@ -10,7 +10,14 @@ import BlauProtocol
 
 struct World {
     var passcode = "0000"
-    var listener: PeerListener?
+    var leftWatchListener: PeerListener?
+    var rightWatchListener: PeerListener?
 }
 
 var Current = World()
+
+
+final class PhoneState: ObservableObject {
+    @Published var leftWatchConnected = false
+    @Published var rightWatchConnected = false
+}

@@ -16,16 +16,23 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     override init() {
         super.init()
-        sharedConnection?.cancel()
-        Current.listener = PeerListener(name: UIDevice.current.name,
-                                        passcode: Current.passcode,
-                                        delegate: self)
+        Current.leftWatchListener?.peerConnection?.cancel()
+        Current.leftWatchListener = PeerListener(name: UIDevice.current.name,
+                                                 passcode: Current.passcode,
+                                                 wristLocation: .left,
+                                                 delegate: self)
+        Current.rightWatchListener?.peerConnection?.cancel()
+        Current.rightWatchListener = PeerListener(name: UIDevice.current.name,
+                                                  passcode: Current.passcode,
+                                                  wristLocation: .right,
+                                                  delegate: self)
     }
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView: ContentView())
+            window.rootViewController = UIHostingController(rootView: ContentView()
+                .environmentObject(PhoneState()))
             self.window = window
             window.makeKeyAndVisible()
         }
@@ -50,9 +57,9 @@ extension SceneDelegate: PeerConnectionDelegate {
         switch message.blauMessageType {
         case .invalid:
             print("Received invalid message")
-        case .deviceName:
+        case .device:
             handleDeviceName(content, message)
-        case .gyroSensor:
+        case .gyro:
             handleGyroSensor(content, message)
         }
     }

@@ -10,8 +10,6 @@ import Foundation
 import Network
 import os.log
 
-public var sharedConnection: PeerConnection?
-
 public protocol PeerConnectionDelegate: class {
     func connectionReady()
     func connectionFailed()
@@ -24,9 +22,9 @@ public class PeerConnection {
     let instantiatedConnection: Bool
     
     public init(endpoint: NWEndpoint,
-         interface: NWInterface?,
-         passcode: String,
-         delegate: PeerConnectionDelegate) {
+                interface: NWInterface?,
+                passcode: String,
+                delegate: PeerConnectionDelegate) {
         self.delegate = delegate
         self.instantiatedConnection = true
         
@@ -36,7 +34,7 @@ public class PeerConnection {
     }
     
     public init(connection: NWConnection,
-         delegate: PeerConnectionDelegate) {
+                delegate: PeerConnectionDelegate) {
         self.delegate = delegate
         self.connection = connection
         self.instantiatedConnection = false
@@ -74,34 +72,34 @@ public class PeerConnection {
         
         connection.start(queue: .main)
     }
-    public func sendDeviceName(deviceName: String) {
+    public func send(deviceName: String) {
         guard let connection = connection else {
             return
         }
         
-        let message = NWProtocolFramer.Message(blauMessageType: .deviceName)
+        let message = NWProtocolFramer.Message(blauMessageType: .device)
         let context = NWConnection.ContentContext(identifier: "DeviceName",
                                                   metadata: [message])
-            
+        
         connection.send(content: deviceName.data(using: .unicode),
                         contentContext: context,
                         isComplete: true,
                         completion: .idempotent)
     }
     
-    public func sendGyroData(gyroscopeSensor: GyroscopeSensor) {
+    public func send(gyroData: CMGyroData) {
         guard let connection = connection else {
             return
         }
         
-        let message = NWProtocolFramer.Message(blauMessageType: .gyroSensor)
-        let context = NWConnection.ContentContext(identifier: "GyroSensor",
+        let message = NWProtocolFramer.Message(blauMessageType: .gyro)
+        let context = NWConnection.ContentContext(identifier: "GyroData",
                                                   metadata: [message])
         
-        let archivedGyroscopeSensor = try? NSKeyedArchiver.archivedData(withRootObject: gyroscopeSensor,
-                                                                        requiringSecureCoding: true)
+        let archivedMessage = try? NSKeyedArchiver.archivedData(withRootObject: gyroData,
+                                                                requiringSecureCoding: true)
         
-        connection.send(content: archivedGyroscopeSensor,
+        connection.send(content: archivedMessage,
                         contentContext: context,
                         isComplete: true,
                         completion: .idempotent)

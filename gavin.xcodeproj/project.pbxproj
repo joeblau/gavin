@@ -34,6 +34,7 @@
 		E62A722C22F30D69003CEE07 /* PairView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62A722B22F30D69003CEE07 /* PairView.swift */; };
 		E62A722F22F30D84003CEE07 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62A722E22F30D84003CEE07 /* World.swift */; };
 		E62A723122F3E26E003CEE07 /* PasscodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62A723022F3E26E003CEE07 /* PasscodeView.swift */; };
+		E694EF1222F5A03700371265 /* WKInterfaceDevice+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E694EF1122F5A03700371265 /* WKInterfaceDevice+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,7 @@
 		E62A722B22F30D69003CEE07 /* PairView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairView.swift; sourceTree = "<group>"; };
 		E62A722E22F30D84003CEE07 /* World.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
 		E62A723022F3E26E003CEE07 /* PasscodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeView.swift; sourceTree = "<group>"; };
+		E694EF1122F5A03700371265 /* WKInterfaceDevice+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WKInterfaceDevice+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				E62A720B22F26F49003CEE07 /* WKInterfaceDeviceWristLocation+Extensions.swift */,
+				E694EF1122F5A03700371265 /* WKInterfaceDevice+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -478,6 +481,7 @@
 				E62A723122F3E26E003CEE07 /* PasscodeView.swift in Sources */,
 				E62A722F22F30D84003CEE07 /* World.swift in Sources */,
 				E62A721222F27AE7003CEE07 /* WorkoutManager.swift in Sources */,
+				E694EF1222F5A03700371265 /* WKInterfaceDevice+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

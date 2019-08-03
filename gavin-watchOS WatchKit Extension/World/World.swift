@@ -7,9 +7,16 @@
 
 import Foundation
 import BlauProtocol
+import Combine
+import SwiftUI
 
 struct World {
     var browser: PeerBrowser?
+    var peerConnection: PeerConnection?
 }
 
 var Current = World()
+
+final class WatchState: ObservableObject {
+    @Published var connected = false
+}

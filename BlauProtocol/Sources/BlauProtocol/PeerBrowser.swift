@@ -15,9 +15,13 @@ public protocol PeerBrowserDelegate: class {
 public class PeerBrowser {
     private weak var delegate: PeerBrowserDelegate?
     private var browser: NWBrowser?
-    
-    public init(delegate: PeerBrowserDelegate) {
+    private var wristLocation: WristLocation
+
+    public init(wristLocation: WristLocation,
+                delegate: PeerBrowserDelegate) {
         self.delegate = delegate
+        self.wristLocation = wristLocation
+
         startBrowsing()
     }
     
@@ -25,7 +29,7 @@ public class PeerBrowser {
         let parameters = NWParameters()
         parameters.includePeerToPeer = true
         
-        let browser = NWBrowser(for: .bonjour(type: "_blau._tcp", domain: nil),
+        let browser = NWBrowser(for: .bonjour(type: "_blau_\(wristLocation)._tcp", domain: nil),
                                 using: parameters)
         self.browser = browser
         browser.stateUpdateHandler = { newState in

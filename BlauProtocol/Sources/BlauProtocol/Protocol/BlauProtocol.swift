@@ -11,8 +11,8 @@ import os.log
 
 public enum BlauMessageType: UInt32 {
     case invalid
-    case deviceName
-    case gyroSensor
+    case device
+    case gyro
 }
 
 class BlauProtocol: NWProtocolFramerImplementation {

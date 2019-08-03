@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PairView: View {
+    @EnvironmentObject var phoneState: PhoneState
     @State private var leftConnected: Bool = false
     @State private var rightConnected: Bool = false
     
@@ -15,8 +16,8 @@ struct PairView: View {
         NavigationView {
             VStack {
                 Text("Passcode: \(Current.passcode)")
-                Text("Left ⌚️: \(leftConnected.description)")
-                Text("Right ⌚️: \(rightConnected.description)")
+                Text("Left ⌚️: \(phoneState.leftWatchConnected.description)")
+                Text("Right ⌚️: \(phoneState.rightWatchConnected.description)")
             }
             .navigationBarTitle(Text("Pair"))
         }
@@ -26,7 +27,7 @@ struct PairView: View {
 #if DEBUG
 struct PairView_Previews: PreviewProvider {
     static var previews: some View {
-        PairView()
+        PairView().environmentObject(PhoneState())
     }
 }
 #endif

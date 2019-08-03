@@ -12,15 +12,19 @@ public class PeerListener {
     
     weak var delegate: PeerConnectionDelegate?
     var listener: NWListener?
-    var name: String
-    var passcode: String
+    public var peerConnection: PeerConnection?
+    private var name: String
+    private var passcode: String
+    private var wristLocation: WristLocation
     
     public init(name: String,
          passcode: String,
+         wristLocation: WristLocation,
          delegate: PeerConnectionDelegate) {
         self.delegate = delegate
         self.name = name
         self.passcode = passcode
+        self.wristLocation = wristLocation
         startListtening()
     }
     
@@ -28,7 +32,7 @@ public class PeerListener {
         do {
             let listener = try NWListener(using: NWParameters(passcode: passcode))
             self.listener = listener
-            listener.service = NWListener.Service(name: self.name, type: "_blau._tcp")
+            listener.service = NWListener.Service(name: self.name, type: "_blau_\(wristLocation)._tcp")
             listener.stateUpdateHandler = { newState in
                 switch newState {
                 case .ready:
@@ -44,8 +48,8 @@ public class PeerListener {
 
             listener.newConnectionHandler = { newConnection in
                 if let delegate = self.delegate {
-                    if sharedConnection == nil {
-                        sharedConnection = PeerConnection(connection: newConnection,
+                    if self.peerConnection == nil {
+                        self.peerConnection = PeerConnection(connection: newConnection,
                                                           delegate: delegate)
                     } else {
                         newConnection.cancel()
@@ -64,7 +68,7 @@ public class PeerListener {
     public func reset(name: String) {
         self.name = name
         if let listener = listener {
-            listener.service = NWListener.Service(name: self.name, type: "_blau._tcp")
+            listener.service = NWListener.Service(name: self.name, type: "_blau_\(wristLocation)._tcp")
         }
     }
 }
