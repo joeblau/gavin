@@ -16,6 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     override init() {
         super.init()
+        sharedConnection?.cancel()
         Current.listener = PeerListener(name: UIDevice.current.name,
                                         passcode: Current.passcode,
                                         delegate: self)
@@ -42,8 +43,26 @@ extension SceneDelegate: PeerConnectionDelegate {
         print("failed")
     }
     
-    func receiveMessage(context: Data?, message: NWProtocolFramer.Message) {
-        print("message")
+    func receiveMessage(content: Data?, message: NWProtocolFramer.Message) {
+        guard let content = content else {
+            return
+        }
+        switch message.blauMessageType {
+        case .invalid:
+            print("Received invalid message")
+        case .deviceName:
+            handleDeviceName(content, message)
+        case .gyroSensor:
+            handleGyroSensor(content, message)
+        }
+    }
+    
+    func handleDeviceName(_ content: Data, _ message: NWProtocolFramer.Message) {
+        print("device name")
+    }
+    
+    func handleGyroSensor(_ content: Data, _ message: NWProtocolFramer.Message) {
+        print("gyro sensor")
     }
     
     

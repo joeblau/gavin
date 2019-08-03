@@ -12,10 +12,10 @@ final class BlauProtocolTests: XCTestCase {
         expect = expectation(description: "test_connection")
         expect?.expectedFulfillmentCount = 4
         
-        sharedListener = PeerListener(name: "MockHost",
-                                      passcode: "0000",
-                                      delegate: self)
-        sharedBrowser = PeerBrowser(delegate: self)
+//        sharedListener = PeerListener(name: "MockHost",
+//                                      passcode: "0000",
+//                                      delegate: self)
+//        sharedBrowser = PeerBrowser(delegate: self)
 //        }
 //
 //        let gyroData = CMGyroData()

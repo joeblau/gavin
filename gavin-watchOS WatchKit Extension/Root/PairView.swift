@@ -1,6 +1,6 @@
 //
 //  PairView.swift
-//  gavin-iOS
+//  gavin-watchOS WatchKit Extension
 //
 //  Created by Joe Blau on 8/1/19.
 //
@@ -9,14 +9,7 @@ import SwiftUI
 
 struct PairView: View {
     var body: some View {
-        NavigationView {
-            VStack {
-                Text("Passcode: \(Current.passcode)")
-                Text("Left ⌚️: ")
-                Text("Right ⌚️: ")
-            }
-            .navigationBarTitle(Text("Pair"))
-        }
+        Text("Hello World!")
     }
 }
 

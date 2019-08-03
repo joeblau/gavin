@@ -8,20 +8,20 @@
 import Network
 import os.log
 
-protocol PeerBrowserDelegate: class {
+public protocol PeerBrowserDelegate: class {
     func refresh(results: Set<NWBrowser.Result>)
 }
 
-class PeerBrowser {
+public class PeerBrowser {
     private weak var delegate: PeerBrowserDelegate?
     private var browser: NWBrowser?
     
-    init(delegate: PeerBrowserDelegate) {
+    public init(delegate: PeerBrowserDelegate) {
         self.delegate = delegate
         startBrowsing()
     }
     
-    func startBrowsing()  {
+    public func startBrowsing()  {
         let parameters = NWParameters()
         parameters.includePeerToPeer = true
         

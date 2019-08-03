@@ -31,6 +31,9 @@
 		E62A722522F3062D003CEE07 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62A722422F3062D003CEE07 /* World.swift */; };
 		E62A722722F30ADF003CEE07 /* BlauProtocol in Frameworks */ = {isa = PBXBuildFile; productRef = E62A722622F30ADF003CEE07 /* BlauProtocol */; };
 		E62A722922F30AF0003CEE07 /* BlauProtocol in Frameworks */ = {isa = PBXBuildFile; productRef = E62A722822F30AF0003CEE07 /* BlauProtocol */; };
+		E62A722C22F30D69003CEE07 /* PairView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62A722B22F30D69003CEE07 /* PairView.swift */; };
+		E62A722F22F30D84003CEE07 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62A722E22F30D84003CEE07 /* World.swift */; };
+		E62A723122F3E26E003CEE07 /* PasscodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62A723022F3E26E003CEE07 /* PasscodeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +108,9 @@
 		E62A721C22F30471003CEE07 /* UITableViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extensions.swift"; sourceTree = "<group>"; };
 		E62A722122F30515003CEE07 /* PairView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairView.swift; sourceTree = "<group>"; };
 		E62A722422F3062D003CEE07 /* World.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
+		E62A722B22F30D69003CEE07 /* PairView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairView.swift; sourceTree = "<group>"; };
+		E62A722E22F30D84003CEE07 /* World.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
+		E62A723022F3E26E003CEE07 /* PasscodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +194,7 @@
 		E62A71EC22F26ACA003CEE07 /* gavin-watchOS WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				E62A722D22F30D72003CEE07 /* World */,
 				E62A721322F27CB6003CEE07 /* gavin-watchOS WatchKit Extension.entitlements */,
 				E62A720E22F27AD8003CEE07 /* Controllers */,
 				E62A720A22F26F1E003CEE07 /* Extensions */,
@@ -213,6 +220,8 @@
 			isa = PBXGroup;
 			children = (
 				E62A71ED22F26ACA003CEE07 /* ContentView.swift */,
+				E62A722B22F30D69003CEE07 /* PairView.swift */,
+				E62A723022F3E26E003CEE07 /* PasscodeView.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -220,8 +229,8 @@
 		E62A720922F26E62003CEE07 /* Root */ = {
 			isa = PBXGroup;
 			children = (
+				E62A722A22F30D38003CEE07 /* Pair */,
 				E62A71C622F26AB2003CEE07 /* ContentView.swift */,
-				E62A722122F30515003CEE07 /* PairView.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -263,6 +272,22 @@
 			isa = PBXGroup;
 			children = (
 				E62A722422F3062D003CEE07 /* World.swift */,
+			);
+			path = World;
+			sourceTree = "<group>";
+		};
+		E62A722A22F30D38003CEE07 /* Pair */ = {
+			isa = PBXGroup;
+			children = (
+				E62A722122F30515003CEE07 /* PairView.swift */,
+			);
+			path = Pair;
+			sourceTree = "<group>";
+		};
+		E62A722D22F30D72003CEE07 /* World */ = {
+			isa = PBXGroup;
+			children = (
+				E62A722E22F30D84003CEE07 /* World.swift */,
 			);
 			path = World;
 			sourceTree = "<group>";
@@ -449,6 +474,9 @@
 				E62A71EE22F26ACA003CEE07 /* ContentView.swift in Sources */,
 				E62A720C22F26F49003CEE07 /* WKInterfaceDeviceWristLocation+Extensions.swift in Sources */,
 				E62A71F222F26ACA003CEE07 /* ExtensionDelegate.swift in Sources */,
+				E62A722C22F30D69003CEE07 /* PairView.swift in Sources */,
+				E62A723122F3E26E003CEE07 /* PasscodeView.swift in Sources */,
+				E62A722F22F30D84003CEE07 /* World.swift in Sources */,
 				E62A721222F27AE7003CEE07 /* WorkoutManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,15 +7,15 @@
 
 import Network
 
-extension NWProtocolFramer.Message {
-    convenience init(blauMessageType: BlaudMessageType) {
+public extension NWProtocolFramer.Message {
+    convenience init(blauMessageType: BlauMessageType) {
         self.init(definition: BlauProtocol.definition)
         self.blauMessageType = blauMessageType
     }
     
-    var blauMessageType: BlaudMessageType {
+    var blauMessageType: BlauMessageType {
         get {
-            return self["BlaudMessageType"] as? BlaudMessageType ?? .invalid
+            return self["BlauMessageType"] as? BlauMessageType ?? .invalid
         }
         set {
             self["BlauMessageType"] = newValue

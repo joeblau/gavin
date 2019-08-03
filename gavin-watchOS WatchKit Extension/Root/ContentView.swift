@@ -26,6 +26,13 @@ struct ContentView: View {
         }
         .padding()
         .navigationBarTitle(Text("⌚️ \(wrist)"))
+        .onAppear {
+            print("here")
+        }
+        .onDisappear {
+            print("gone")
+        }
+
     }
 }
 

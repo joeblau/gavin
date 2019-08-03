@@ -9,8 +9,9 @@ import Network
 import Foundation
 import os.log
 
-enum BlaudMessageType: UInt32 {
+public enum BlauMessageType: UInt32 {
     case invalid
+    case deviceName
     case gyroSensor
 }
 
@@ -43,8 +44,8 @@ class BlauProtocol: NWProtocolFramerImplementation {
                 return headerSize
             }
             
-            var messageType = BlaudMessageType.invalid
-            if let parsedMessageType = BlaudMessageType(rawValue: header.type) {
+            var messageType = BlauMessageType.invalid
+            if let parsedMessageType = BlauMessageType(rawValue: header.type) {
                 messageType = parsedMessageType
             }
             let message = NWProtocolFramer.Message(blauMessageType: messageType)
